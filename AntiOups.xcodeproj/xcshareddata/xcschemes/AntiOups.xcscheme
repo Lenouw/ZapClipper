@@ -5,7 +5,7 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
-      buildArchitectures = "Automatic">
+      runPostActionsOnFailure = "NO">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-               BuildableName = "Anti-Oups.app"
+               BuildableName = "AntiOups.app"
                BlueprintName = "AntiOups"
                ReferencedContainer = "container:AntiOups.xcodeproj">
             </BuildableReference>
@@ -28,7 +28,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      onlyGenerateCoverageForSpecifiedTargets = "NO">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
+            BuildableName = "AntiOups.app"
+            BlueprintName = "AntiOups"
+            ReferencedContainer = "container:AntiOups.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -45,11 +56,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-            BuildableName = "Anti-Oups.app"
+            BuildableName = "AntiOups.app"
             BlueprintName = "AntiOups"
             ReferencedContainer = "container:AntiOups.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -62,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-            BuildableName = "Anti-Oups.app"
+            BuildableName = "AntiOups.app"
             BlueprintName = "AntiOups"
             ReferencedContainer = "container:AntiOups.xcodeproj">
          </BuildableReference>
