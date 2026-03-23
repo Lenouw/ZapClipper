@@ -1,0 +1,26 @@
+# Xcode
+DerivedData/
+build/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.moved-aside
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Sparkle private key (NEVER commit)
+sparkle_private_key
+
+# Build products
+*.app
+*.ipa
+*.dSYM.zip
+*.dSYM
