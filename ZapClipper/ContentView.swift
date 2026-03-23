@@ -69,9 +69,18 @@ struct ContentView: View {
 
             Spacer()
 
-            Text("Créée par Florian BONIN avec l'aide de Claude")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            VStack(spacing: 4) {
+                Text("Créée par Florian avec l'aide de Claude")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
+                Button("Signaler un bug") {
+                    sendBugReport()
+                }
+                .font(.caption2)
+                .buttonStyle(.plain)
+                .foregroundStyle(.blue.opacity(0.7))
+            }
         }
         .padding(32)
     }
@@ -197,6 +206,35 @@ struct ContentView: View {
         .padding(24)
     }
 
+    private func sendBugReport() {
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "?"
+        let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "?"
+        let osVersion = ProcessInfo.processInfo.operatingSystemVersionString
+
+        let subject = "[ZapClipper Bug]"
+        let body = """
+        Decrivez le probleme rencontre :
+
+
+
+        Etapes pour reproduire (optionnel) :
+
+
+
+        --- Ne pas modifier ---
+        Version: \(version) (\(build))
+        macOS: \(osVersion)
+        """
+
+        let recipient = "191094898+Lenouw@users.noreply.github.com"
+        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+
+        if let url = URL(string: "mailto:\(recipient)?subject=\(encodedSubject)&body=\(encodedBody)") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+
     // MARK: - Preferences Tab
 
     private var preferencesTab: some View {
@@ -247,7 +285,7 @@ struct ContentView: View {
 
             Spacer()
 
-            Text("Creee par Florian BONIN avec l'aide de Claude")
+            Text("Creee par Florian avec l'aide de Claude")
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }
