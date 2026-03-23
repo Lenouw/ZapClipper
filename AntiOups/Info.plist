@@ -6,5 +6,9 @@
 	<string>Anti-Oups</string>
 	<key>CFBundleDisplayName</key>
 	<string>Anti-Oups</string>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/Lenouw/AntiOups/main/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>1AvZry8Dl0dM3/B2UjkbZeziG7erROR+03HNyrP8T+E=</string>
 </dict>
 </plist>

@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+    <channel>
+        <title>Anti-Oups</title>
+        <item>
+            <title>Version 1.1</title>
+            <pubDate>Sun, 23 Mar 2026 21:00:00 +0100</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>Anti-Oups 1.1</h2>
+                <ul>
+                    <li>Mots-cles personnalisables depuis l'app</li>
+                    <li>Ignore les messages cites dans les reponses</li>
+                    <li>Mises a jour automatiques via Sparkle</li>
+                    <li>Nouvel onglet Preferences</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://github.com/Lenouw/AntiOups/releases/download/v1.1/Anti-Oups-1.1.zip"
+                sparkle:edSignature="TUW7B7RdCo0WS86tEu5Nxiu1MI2K1NFifew9XaEt78Oo4G06IKLhiQFcxoW9qNyI94akSOsbK0gyFEK6RwwZBg=="
+                length="1491943"
+                type="application/octet-stream"
+            />
+        </item>
+    </channel>
+</rss>

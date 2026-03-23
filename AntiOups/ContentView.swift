@@ -1,6 +1,9 @@
 import SwiftUI
+import Sparkle
 
 struct ContentView: View {
+
+    let updater: SPUUpdater
 
     @State private var keywords: KeywordData = KeywordStore.shared.load()
     @State private var newFrenchWord = ""
@@ -14,6 +17,9 @@ struct ContentView: View {
 
             keywordsTab
                 .tabItem { Label("Mots-cles", systemImage: "text.magnifyingglass") }
+
+            preferencesTab
+                .tabItem { Label("Preferences", systemImage: "gearshape.2") }
         }
         .frame(width: 560, height: 700)
     }
@@ -191,6 +197,63 @@ struct ContentView: View {
         .padding(24)
     }
 
+    // MARK: - Preferences Tab
+
+    private var preferencesTab: some View {
+        VStack(spacing: 24) {
+            Text("Preferences")
+                .font(.title2.bold())
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            GroupBox {
+                VStack(alignment: .leading, spacing: 16) {
+                    Label("Mises a jour", systemImage: "arrow.triangle.2.circlepath")
+                        .font(.headline)
+
+                    Toggle("Verifier automatiquement les mises a jour", isOn: Binding(
+                        get: { updater.automaticallyChecksForUpdates },
+                        set: { updater.automaticallyChecksForUpdates = $0 }
+                    ))
+
+                    HStack {
+                        Button("Verifier maintenant") {
+                            updater.checkForUpdates()
+                        }
+
+                        Spacer()
+
+                        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
+                           let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String {
+                            Text("Version \(version) (\(build))")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+                .padding(8)
+            }
+
+            GroupBox {
+                VStack(alignment: .leading, spacing: 12) {
+                    Label("A propos", systemImage: "info.circle")
+                        .font(.headline)
+
+                    Text("Anti-Oups detecte les oublis de pieces jointes dans Apple Mail. Quand vous mentionnez une piece jointe sans en attacher une, l'extension vous previent avant l'envoi.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
+                .padding(8)
+            }
+
+            Spacer()
+
+            Text("Creee par Florian BONIN avec l'aide de Claude")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .padding(32)
+    }
+
     // MARK: - Actions
 
     private func addFrenchWord() {
@@ -233,6 +296,4 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+// Preview disabled - requires SPUUpdater instance

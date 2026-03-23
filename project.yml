@@ -11,7 +11,30 @@ settings:
     SWIFT_VERSION: "5.9"
     CODE_SIGN_IDENTITY: "Apple Development"
     CODE_SIGN_STYLE: Automatic
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: TQVHUV8MZY
+
+packages:
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: "2.6.0"
+
+schemes:
+  AntiOups:
+    build:
+      targets:
+        AntiOups: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+
+  AntiOupsExtension:
+    build:
+      targets:
+        AntiOupsExtension: all
+    run:
+      config: Debug
+      askForAppToLaunch: true
 
 targets:
   AntiOups:
@@ -19,6 +42,7 @@ targets:
     platform: macOS
     sources:
       - path: AntiOups
+      - path: Shared
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.florianbonin.AntiOups
@@ -26,18 +50,20 @@ targets:
         INFOPLIST_FILE: AntiOups/Info.plist
         CODE_SIGN_ENTITLEMENTS: AntiOups/AntiOups.entitlements
         GENERATE_INFOPLIST_FILE: true
-        MARKETING_VERSION: "1.0"
-        CURRENT_PROJECT_VERSION: "1"
+        MARKETING_VERSION: "1.1"
+        CURRENT_PROJECT_VERSION: "2"
         INFOPLIST_KEY_CFBundleDisplayName: "Anti-Oups"
         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.utilities"
     dependencies:
       - target: AntiOupsExtension
+      - package: Sparkle
 
   AntiOupsExtension:
     type: app-extension
     platform: macOS
     sources:
       - path: AntiOupsExtension
+      - path: Shared
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.florianbonin.AntiOups.AntiOupsExtension
@@ -45,7 +71,7 @@ targets:
         INFOPLIST_FILE: AntiOupsExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: AntiOupsExtension/AntiOupsExtension.entitlements
         GENERATE_INFOPLIST_FILE: true
-        MARKETING_VERSION: "1.0"
-        CURRENT_PROJECT_VERSION: "1"
+        MARKETING_VERSION: "1.1"
+        CURRENT_PROJECT_VERSION: "2"
     dependencies:
       - sdk: MailKit.framework
