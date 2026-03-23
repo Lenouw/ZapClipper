@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>Anti-Oups</string>
+	<string>ZapClipper</string>
 	<key>CFBundleDisplayName</key>
-	<string>Anti-Oups</string>
+	<string>ZapClipper</string>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/Lenouw/AntiOups/main/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/Lenouw/ZapClipper/main/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>1AvZry8Dl0dM3/B2UjkbZeziG7erROR+03HNyrP8T+E=</string>
 </dict>

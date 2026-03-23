@@ -33,7 +33,7 @@ struct ContentView: View {
                     .font(.system(size: 64))
                     .foregroundStyle(.blue)
 
-                Text("Anti-Oups")
+                Text("ZapClipper")
                     .font(.largeTitle.bold())
 
                 Text("Ne partez plus jamais sans votre piece jointe")
@@ -50,7 +50,7 @@ struct ContentView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     instructionRow(number: 1, text: "Ouvrez l'app Mail")
                     instructionRow(number: 2, text: "Allez dans Mail > Reglages > Extensions")
-                    instructionRow(number: 3, text: "Cochez \"AntiOupsExtension\"")
+                    instructionRow(number: 3, text: "Cochez \"ZapClipperExtension\"")
                     instructionRow(number: 4, text: "C'est tout ! L'extension surveille vos mails automatiquement")
                 }
             }
@@ -62,7 +62,7 @@ struct ContentView: View {
                 Label("Comment ca marche", systemImage: "questionmark.circle")
                     .font(.title3.bold())
 
-                Text("Quand vous cliquez \"Envoyer\" dans Mail, Anti-Oups verifie si votre message mentionne une piece jointe (en francais ou en anglais) sans qu'un fichier soit effectivement attache. Si c'est le cas, un message vous previent.")
+                Text("Quand vous cliquez \"Envoyer\" dans Mail, ZapClipper verifie si votre message mentionne une piece jointe (en francais ou en anglais) sans qu'un fichier soit effectivement attache. Si c'est le cas, un message vous previent.")
                     .foregroundStyle(.secondary)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -238,7 +238,7 @@ struct ContentView: View {
                     Label("A propos", systemImage: "info.circle")
                         .font(.headline)
 
-                    Text("Anti-Oups detecte les oublis de pieces jointes dans Apple Mail. Quand vous mentionnez une piece jointe sans en attacher une, l'extension vous previent avant l'envoi.")
+                    Text("ZapClipper detecte les oublis de pieces jointes dans Apple Mail. Quand vous mentionnez une piece jointe sans en attacher une, l'extension vous previent avant l'envoi.")
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }

@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11D118D2271566320C008FBA /* KeywordDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC865E64211D43245F17767 /* KeywordDetector.swift */; };
+		38C05A4B446AD53931B3098D /* KeywordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C29B2B179602973E10F43 /* KeywordStore.swift */; };
+		412C52E843A65E3647B3A235 /* ComposeSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068A44E35D64DFAA6E58BB6B /* ComposeSessionHandler.swift */; };
+		47838FAEE2806715D37048D3 /* MIMEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C861A5E38B226FA3034294 /* MIMEParser.swift */; };
+		88A5CA34383A10F7125E4B45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FC7B6B714AADFCDD8C58F /* ContentView.swift */; };
+		8C66EB2162706AE2F1058735 /* ZapClipperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255CA438393400F8ED20714 /* ZapClipperApp.swift */; };
+		941EC67A7025300B5C09D826 /* ZapClipperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD3DB65703F161B31BDD6C0 /* ZapClipperExtension.swift */; };
+		A15DB0763C00C2A025F4ECBC /* MailKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC2DC78A91E41EFD65380ED /* MailKit.framework */; };
+		A97AD042774CDBEECE814E30 /* ZapClipperExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D0BAD1A1243427BAA6223021 /* ZapClipperExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BC369F76074468DCC39FE3F2 /* KeywordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C29B2B179602973E10F43 /* KeywordStore.swift */; };
+		CF79DE9C4A4AEC8A16A838D0 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 5A055A37B9206060A5D06B0A /* Sparkle */; };
+		F6B88943C7EABB0B5B936102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C289539CCDEF50C19A18810C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C45378E048E20733A9D8836D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0A8B05838D8B47176FB65D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA0AA98C82D19E3D31BE2F8A;
+			remoteInfo = ZapClipperExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57A4AAF6ABC11DBF880C42B6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A97AD042774CDBEECE814E30 /* ZapClipperExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		068A44E35D64DFAA6E58BB6B /* ComposeSessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeSessionHandler.swift; sourceTree = "<group>"; };
+		1BD3DB65703F161B31BDD6C0 /* ZapClipperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZapClipperExtension.swift; sourceTree = "<group>"; };
+		2255CA438393400F8ED20714 /* ZapClipperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZapClipperApp.swift; sourceTree = "<group>"; };
+		2CC865E64211D43245F17767 /* KeywordDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordDetector.swift; sourceTree = "<group>"; };
+		33D57C37D989D24246C37AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		36CFD23369FF8E6789A72034 /* ZapClipper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZapClipper.entitlements; sourceTree = "<group>"; };
+		378B13CDA7AB4FC24BB652D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		69C861A5E38B226FA3034294 /* MIMEParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMEParser.swift; sourceTree = "<group>"; };
+		86E5CBBBBB6AAC80D1AA1E47 /* ZapClipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZapClipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76FC7B6B714AADFCDD8C58F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADC2DC78A91E41EFD65380ED /* MailKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MailKit.framework; path = System/Library/Frameworks/MailKit.framework; sourceTree = SDKROOT; };
+		BF2C29B2B179602973E10F43 /* KeywordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordStore.swift; sourceTree = "<group>"; };
+		BFB011993814325CC32E3C84 /* ZapClipperExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZapClipperExtension.entitlements; sourceTree = "<group>"; };
+		C289539CCDEF50C19A18810C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0BAD1A1243427BAA6223021 /* ZapClipperExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZapClipperExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		386FF82E614914EBB93017EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF79DE9C4A4AEC8A16A838D0 /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43B9E6FB3375CBFB43CA76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15DB0763C00C2A025F4ECBC /* MailKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B0B344DA1EA068B8A7C1D92 /* ZapClipper */ = {
+			isa = PBXGroup;
+			children = (
+				C289539CCDEF50C19A18810C /* Assets.xcassets */,
+				A76FC7B6B714AADFCDD8C58F /* ContentView.swift */,
+				378B13CDA7AB4FC24BB652D6 /* Info.plist */,
+				36CFD23369FF8E6789A72034 /* ZapClipper.entitlements */,
+				2255CA438393400F8ED20714 /* ZapClipperApp.swift */,
+			);
+			path = ZapClipper;
+			sourceTree = "<group>";
+		};
+		78BAF77A6D772639C26CAF5A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C29B2B179602973E10F43 /* KeywordStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7ADA25F27256B66A42C64385 /* ZapClipperExtension */ = {
+			isa = PBXGroup;
+			children = (
+				068A44E35D64DFAA6E58BB6B /* ComposeSessionHandler.swift */,
+				33D57C37D989D24246C37AA0 /* Info.plist */,
+				2CC865E64211D43245F17767 /* KeywordDetector.swift */,
+				69C861A5E38B226FA3034294 /* MIMEParser.swift */,
+				BFB011993814325CC32E3C84 /* ZapClipperExtension.entitlements */,
+				1BD3DB65703F161B31BDD6C0 /* ZapClipperExtension.swift */,
+			);
+			path = ZapClipperExtension;
+			sourceTree = "<group>";
+		};
+		7B1D30AC6C9F49725C9469B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86E5CBBBBB6AAC80D1AA1E47 /* ZapClipper.app */,
+				D0BAD1A1243427BAA6223021 /* ZapClipperExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1FB00AB7F0152561EA15A00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2DC78A91E41EFD65380ED /* MailKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1D86D245F4222C0E48A03AF = {
+			isa = PBXGroup;
+			children = (
+				78BAF77A6D772639C26CAF5A /* Shared */,
+				3B0B344DA1EA068B8A7C1D92 /* ZapClipper */,
+				7ADA25F27256B66A42C64385 /* ZapClipperExtension */,
+				E1FB00AB7F0152561EA15A00 /* Frameworks */,
+				7B1D30AC6C9F49725C9469B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA0AA98C82D19E3D31BE2F8A /* ZapClipperExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F309542228499AACE12E793B /* Build configuration list for PBXNativeTarget "ZapClipperExtension" */;
+			buildPhases = (
+				7D33C25AC441697E5BAE7675 /* Sources */,
+				D43B9E6FB3375CBFB43CA76B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZapClipperExtension;
+			packageProductDependencies = (
+			);
+			productName = ZapClipperExtension;
+			productReference = D0BAD1A1243427BAA6223021 /* ZapClipperExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D224B3EDE35C81411E59EEB4 /* ZapClipper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0597FB9B3D34AA9A15827DC0 /* Build configuration list for PBXNativeTarget "ZapClipper" */;
+			buildPhases = (
+				0A8B7C6E609B854C56E5AD3A /* Sources */,
+				3F74B78E2A13EDBEF758AF82 /* Resources */,
+				386FF82E614914EBB93017EC /* Frameworks */,
+				57A4AAF6ABC11DBF880C42B6 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFEE2855CD4349694D549D7F /* PBXTargetDependency */,
+			);
+			name = ZapClipper;
+			packageProductDependencies = (
+				5A055A37B9206060A5D06B0A /* Sparkle */,
+			);
+			productName = ZapClipper;
+			productReference = 86E5CBBBBB6AAC80D1AA1E47 /* ZapClipper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0A8B05838D8B47176FB65D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					BA0AA98C82D19E3D31BE2F8A = {
+						DevelopmentTeam = TQVHUV8MZY;
+						ProvisioningStyle = Automatic;
+					};
+					D224B3EDE35C81411E59EEB4 = {
+						DevelopmentTeam = TQVHUV8MZY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9B70ECE30BC7709E3D4006F7 /* Build configuration list for PBXProject "ZapClipper" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F1D86D245F4222C0E48A03AF;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6477E67FFEFC122126D83E5D /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7B1D30AC6C9F49725C9469B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D224B3EDE35C81411E59EEB4 /* ZapClipper */,
+				BA0AA98C82D19E3D31BE2F8A /* ZapClipperExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F74B78E2A13EDBEF758AF82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B88943C7EABB0B5B936102 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A8B7C6E609B854C56E5AD3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A5CA34383A10F7125E4B45 /* ContentView.swift in Sources */,
+				38C05A4B446AD53931B3098D /* KeywordStore.swift in Sources */,
+				8C66EB2162706AE2F1058735 /* ZapClipperApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D33C25AC441697E5BAE7675 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				412C52E843A65E3647B3A235 /* ComposeSessionHandler.swift in Sources */,
+				11D118D2271566320C008FBA /* KeywordDetector.swift in Sources */,
+				BC369F76074468DCC39FE3F2 /* KeywordStore.swift in Sources */,
+				47838FAEE2806715D37048D3 /* MIMEParser.swift in Sources */,
+				941EC67A7025300B5C09D826 /* ZapClipperExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFEE2855CD4349694D549D7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA0AA98C82D19E3D31BE2F8A /* ZapClipperExtension */;
+			targetProxy = C45378E048E20733A9D8836D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2303AAA31C3624A98981AC49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZapClipper/ZapClipper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZapClipper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZapClipper;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper;
+				PRODUCT_NAME = ZapClipper;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2A8E6FC0AB41CC741CCD7852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZapClipperExtension/ZapClipperExtension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZapClipperExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper.ZapClipperExtension;
+				PRODUCT_NAME = ZapClipperExtension;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2BD2DFAD7C816CCEA904097A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TQVHUV8MZY;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		9B55FFAF529976A38435DC60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZapClipper/ZapClipper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZapClipper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZapClipper;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper;
+				PRODUCT_NAME = ZapClipper;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D5847EB341D7C26C2E552208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TQVHUV8MZY;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		D9EB01A7A6ADB461A788F9A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZapClipperExtension/ZapClipperExtension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZapClipperExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper.ZapClipperExtension;
+				PRODUCT_NAME = ZapClipperExtension;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0597FB9B3D34AA9A15827DC0 /* Build configuration list for PBXNativeTarget "ZapClipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B55FFAF529976A38435DC60 /* Debug */,
+				2303AAA31C3624A98981AC49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9B70ECE30BC7709E3D4006F7 /* Build configuration list for PBXProject "ZapClipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD2DFAD7C816CCEA904097A /* Debug */,
+				D5847EB341D7C26C2E552208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F309542228499AACE12E793B /* Build configuration list for PBXNativeTarget "ZapClipperExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8E6FC0AB41CC741CCD7852 /* Debug */,
+				D9EB01A7A6ADB461A788F9A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6477E67FFEFC122126D83E5D /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A055A37B9206060A5D06B0A /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6477E67FFEFC122126D83E5D /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A0A8B05838D8B47176FB65D6 /* Project object */;
+}

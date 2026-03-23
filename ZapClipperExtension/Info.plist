@@ -9,7 +9,7 @@
 			<key>MEComposeSession</key>
 			<dict>
 				<key>MEComposeIconToolTip</key>
-				<string>Anti-Oups</string>
+				<string>ZapClipper</string>
 			</dict>
 			<key>MEExtensionCapabilities</key>
 			<array>
@@ -19,7 +19,7 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.email.extension</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).AntiOupsExtension</string>
+		<string>$(PRODUCT_MODULE_NAME).ZapClipperExtension</string>
 	</dict>
 </dict>
 </plist>

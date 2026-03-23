@@ -1,4 +1,4 @@
-name: AntiOups
+name: ZapClipper
 options:
   bundleIdPrefix: com.florianbonin
   deploymentTarget:
@@ -19,57 +19,57 @@ packages:
     from: "2.6.0"
 
 schemes:
-  AntiOups:
+  ZapClipper:
     build:
       targets:
-        AntiOups: all
+        ZapClipper: all
     run:
       config: Debug
     archive:
       config: Release
 
-  AntiOupsExtension:
+  ZapClipperExtension:
     build:
       targets:
-        AntiOupsExtension: all
+        ZapClipperExtension: all
     run:
       config: Debug
       askForAppToLaunch: true
 
 targets:
-  AntiOups:
+  ZapClipper:
     type: application
     platform: macOS
     sources:
-      - path: AntiOups
+      - path: ZapClipper
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.florianbonin.AntiOups
-        PRODUCT_NAME: Anti-Oups
-        INFOPLIST_FILE: AntiOups/Info.plist
-        CODE_SIGN_ENTITLEMENTS: AntiOups/AntiOups.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.florianbonin.ZapClipper
+        PRODUCT_NAME: ZapClipper
+        INFOPLIST_FILE: ZapClipper/Info.plist
+        CODE_SIGN_ENTITLEMENTS: ZapClipper/ZapClipper.entitlements
         GENERATE_INFOPLIST_FILE: true
         MARKETING_VERSION: "1.1"
         CURRENT_PROJECT_VERSION: "2"
-        INFOPLIST_KEY_CFBundleDisplayName: "Anti-Oups"
+        INFOPLIST_KEY_CFBundleDisplayName: "ZapClipper"
         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.utilities"
     dependencies:
-      - target: AntiOupsExtension
+      - target: ZapClipperExtension
       - package: Sparkle
 
-  AntiOupsExtension:
+  ZapClipperExtension:
     type: app-extension
     platform: macOS
     sources:
-      - path: AntiOupsExtension
+      - path: ZapClipperExtension
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.florianbonin.AntiOups.AntiOupsExtension
-        PRODUCT_NAME: AntiOupsExtension
-        INFOPLIST_FILE: AntiOupsExtension/Info.plist
-        CODE_SIGN_ENTITLEMENTS: AntiOupsExtension/AntiOupsExtension.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.florianbonin.ZapClipper.ZapClipperExtension
+        PRODUCT_NAME: ZapClipperExtension
+        INFOPLIST_FILE: ZapClipperExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: ZapClipperExtension/ZapClipperExtension.entitlements
         GENERATE_INFOPLIST_FILE: true
         MARKETING_VERSION: "1.1"
         CURRENT_PROJECT_VERSION: "2"

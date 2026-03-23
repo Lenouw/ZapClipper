@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-               BuildableName = "AntiOups.app"
-               BlueprintName = "AntiOups"
-               ReferencedContainer = "container:AntiOups.xcodeproj">
+               BlueprintIdentifier = "D224B3EDE35C81411E59EEB4"
+               BuildableName = "ZapClipper.app"
+               BlueprintName = "ZapClipper"
+               ReferencedContainer = "container:ZapClipper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-            BuildableName = "AntiOups.app"
-            BlueprintName = "AntiOups"
-            ReferencedContainer = "container:AntiOups.xcodeproj">
+            BlueprintIdentifier = "D224B3EDE35C81411E59EEB4"
+            BuildableName = "ZapClipper.app"
+            BlueprintName = "ZapClipper"
+            ReferencedContainer = "container:ZapClipper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-            BuildableName = "AntiOups.app"
-            BlueprintName = "AntiOups"
-            ReferencedContainer = "container:AntiOups.xcodeproj">
+            BlueprintIdentifier = "D224B3EDE35C81411E59EEB4"
+            BuildableName = "ZapClipper.app"
+            BlueprintName = "ZapClipper"
+            ReferencedContainer = "container:ZapClipper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0745DFB7899412C913CEAC5F"
-            BuildableName = "AntiOups.app"
-            BlueprintName = "AntiOups"
-            ReferencedContainer = "container:AntiOups.xcodeproj">
+            BlueprintIdentifier = "D224B3EDE35C81411E59EEB4"
+            BuildableName = "ZapClipper.app"
+            BlueprintName = "ZapClipper"
+            ReferencedContainer = "container:ZapClipper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

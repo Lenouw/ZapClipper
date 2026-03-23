@@ -59,7 +59,7 @@ class ComposeSessionHandler: NSObject, MEComposeSessionHandler {
         }
 
         let error = NSError(
-            domain: "com.antioups.mail",
+            domain: "com.zapclipper.mail",
             code: 1,
             userInfo: [NSLocalizedDescriptionKey: errorMessage]
         )

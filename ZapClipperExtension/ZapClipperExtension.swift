@@ -1,6 +1,6 @@
 import MailKit
 
-class AntiOupsExtension: NSObject, MEExtension {
+class ZapClipperExtension: NSObject, MEExtension {
 
     func handler(for session: MEComposeSession) -> MEComposeSessionHandler {
         return ComposeSessionHandler()

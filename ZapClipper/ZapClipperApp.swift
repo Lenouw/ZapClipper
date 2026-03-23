@@ -2,7 +2,7 @@ import SwiftUI
 import Sparkle
 
 @main
-struct AntiOupsApp: App {
+struct ZapClipperApp: App {
     private let updaterController: SPUStandardUpdaterController
 
     init() {
