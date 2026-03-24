@@ -8,6 +8,12 @@ ZapClipper est une extension Apple Mail pour macOS qui detecte quand vous mentio
 
 [![ZapClipper Demo](https://img.youtube.com/vi/1EWYjqluWoA/0.jpg)](https://www.youtube.com/shorts/1EWYjqluWoA)
 
+## Screenshots
+
+| Accueil | Mots-cles | Alerte |
+|---------|-----------|--------|
+| ![Accueil](screenshots/accueil.png) | ![Mots-cles](screenshots/mots-cles.png) | ![Alerte](screenshots/alerte-piece-jointe.png) |
+
 ## Fonctionnalites
 
 - Detection bilingue (francais & anglais) des mots-cles d'attachement
