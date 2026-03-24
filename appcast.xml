@@ -3,6 +3,25 @@
     <channel>
         <title>ZapClipper</title>
         <item>
+            <title>Version 1.2.1</title>
+            <pubDate>Mon, 24 Mar 2026 10:22:00 +0100</pubDate>
+            <sparkle:version>4</sparkle:version>
+            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>ZapClipper 1.2.1</h2>
+                <ul>
+                    <li>Export/Import des mots-cles (sauvegarde et restauration)</li>
+                    <li>Les mots-cles personnalises sont preserves lors des mises a jour</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://github.com/Lenouw/ZapClipper/releases/download/v1.2.1/ZapClipper-1.2.1.zip"
+                sparkle:edSignature="82/81nbOqNmvIU4OLI9CPt/r3+vGDT5muzGIZwlcpV9HOKEnrQMbScYQTAe7Z4MZf2GjDg9ep6Bt38bzQSW1CQ=="
+                length="1457083"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.2</title>
             <pubDate>Mon, 24 Mar 2026 01:00:00 +0100</pubDate>
             <sparkle:version>3</sparkle:version>

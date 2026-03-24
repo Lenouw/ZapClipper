@@ -1,4 +1,5 @@
 import Foundation
+import AppKit
 
 struct KeywordData: Codable {
     var french: [String]
@@ -90,5 +91,49 @@ class KeywordStore {
 
     func resetToDefaults() {
         save(KeywordData(french: Self.defaultFrench, english: Self.defaultEnglish))
+    }
+
+    // MARK: - Export / Import
+
+    /// Exporte les mots-cles dans un fichier JSON via NSSavePanel
+    func exportKeywords() -> Bool {
+        let data = load()
+        let panel = NSSavePanel()
+        panel.title = "Exporter les mots-cles"
+        panel.nameFieldStringValue = "ZapClipper-keywords.json"
+        panel.allowedContentTypes = [.json]
+        panel.canCreateDirectories = true
+
+        guard panel.runModal() == .OK, let url = panel.url else { return false }
+
+        do {
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+            let jsonData = try encoder.encode(data)
+            try jsonData.write(to: url)
+            return true
+        } catch {
+            return false
+        }
+    }
+
+    /// Importe les mots-cles depuis un fichier JSON via NSOpenPanel
+    func importKeywords() -> KeywordData? {
+        let panel = NSOpenPanel()
+        panel.title = "Importer des mots-cles"
+        panel.allowedContentTypes = [.json]
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+
+        guard panel.runModal() == .OK, let url = panel.url else { return nil }
+
+        do {
+            let jsonData = try Data(contentsOf: url)
+            let imported = try JSONDecoder().decode(KeywordData.self, from: jsonData)
+            save(imported)
+            return imported
+        } catch {
+            return nil
+        }
     }
 }

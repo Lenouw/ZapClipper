@@ -10,6 +10,9 @@ struct ContentView: View {
     @State private var newEnglishWord = ""
     @State private var showingResetAlert = false
     @State private var autoCheckUpdates = false
+    @State private var exportMessage = ""
+    @State private var showExportMessage = false
+    @State private var showImportAlert = false
 
     var body: some View {
         TabView {
@@ -199,9 +202,41 @@ struct ContentView: View {
 
                 Spacer()
 
+                Button {
+                    if let imported = KeywordStore.shared.importKeywords() {
+                        keywords = imported
+                        exportMessage = "Mots-cles importes avec succes !"
+                    } else {
+                        exportMessage = ""
+                    }
+                    if !exportMessage.isEmpty { showExportMessage = true }
+                } label: {
+                    Label("Importer", systemImage: "square.and.arrow.down")
+                        .font(.caption)
+                }
+
+                Button {
+                    if KeywordStore.shared.exportKeywords() {
+                        exportMessage = "Mots-cles exportes avec succes !"
+                    } else {
+                        exportMessage = ""
+                    }
+                    if !exportMessage.isEmpty { showExportMessage = true }
+                } label: {
+                    Label("Exporter", systemImage: "square.and.arrow.up")
+                        .font(.caption)
+                }
+
+                Spacer()
+
                 Text("\(keywords.french.count + keywords.english.count) mots-cles au total")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+            }
+            .alert("ZapClipper", isPresented: $showExportMessage) {
+                Button("OK") { }
+            } message: {
+                Text(exportMessage)
             }
         }
         .padding(24)
