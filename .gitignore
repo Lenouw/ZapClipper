@@ -24,3 +24,7 @@ sparkle_private_key
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+# Temp/personal files
+*.mp4
+Files Flo/
