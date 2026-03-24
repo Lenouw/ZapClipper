@@ -3,20 +3,22 @@
     <channel>
         <title>ZapClipper</title>
         <item>
-            <title>Version 1.2.2 (test)</title>
-            <pubDate>Mon, 24 Mar 2026 10:45:00 +0100</pubDate>
+            <title>Version 1.2.2</title>
+            <pubDate>Mon, 24 Mar 2026 11:00:00 +0100</pubDate>
             <sparkle:version>5</sparkle:version>
             <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
             <description><![CDATA[
-                <h2>ZapClipper 1.2.2 (test)</h2>
+                <h2>ZapClipper 1.2.2</h2>
                 <ul>
-                    <li>Test de mise a jour automatique Sparkle</li>
+                    <li>Nouveau logo ZapClipper</li>
+                    <li>Export/Import des mots-cles (sauvegarde et restauration)</li>
+                    <li>Desactivation du sandbox pour compatibilite Sparkle</li>
                 </ul>
             ]]></description>
             <enclosure
-                url="https://github.com/Lenouw/ZapClipper/releases/download/v1.2.2-test/ZapClipper-1.2.2.zip"
-                sparkle:edSignature="UQQqmpIOzACJFMOYM9HrnOHvDN+H/Z7F++Vudd0VUweiyTK9Vd6YlU8TMd23uPCjZOkAlRbXK3TBUhg4OBwZCw=="
-                length="1485202"
+                url="https://github.com/Lenouw/ZapClipper/releases/download/v1.2.2/ZapClipper-1.2.2.zip"
+                sparkle:edSignature="XHJRs9qNPbHic8Nrc5W4Pz+q3w+KvJX/ZF7wVVBvhbDWZrHMgMjcQKJKpSEnI24nGhU2y3XPg3+sAiRoNRF8AQ=="
+                length="1427190"
                 type="application/octet-stream"
             />
         </item>

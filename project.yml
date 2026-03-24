@@ -50,8 +50,8 @@ targets:
         INFOPLIST_FILE: ZapClipper/Info.plist
         CODE_SIGN_ENTITLEMENTS: ZapClipper/ZapClipper.entitlements
         GENERATE_INFOPLIST_FILE: true
-        MARKETING_VERSION: "1.2.1"
-        CURRENT_PROJECT_VERSION: "4"
+        MARKETING_VERSION: "1.2.2"
+        CURRENT_PROJECT_VERSION: "5"
         INFOPLIST_KEY_CFBundleDisplayName: "ZapClipper"
         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.utilities"
     dependencies:
@@ -71,7 +71,7 @@ targets:
         INFOPLIST_FILE: ZapClipperExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: ZapClipperExtension/ZapClipperExtension.entitlements
         GENERATE_INFOPLIST_FILE: true
-        MARKETING_VERSION: "1.2.1"
-        CURRENT_PROJECT_VERSION: "4"
+        MARKETING_VERSION: "1.2.2"
+        CURRENT_PROJECT_VERSION: "5"
     dependencies:
       - sdk: MailKit.framework
