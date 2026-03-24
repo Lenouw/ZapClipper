@@ -3,6 +3,25 @@
     <channel>
         <title>ZapClipper</title>
         <item>
+            <title>Version 1.2</title>
+            <pubDate>Mon, 24 Mar 2026 01:00:00 +0100</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>ZapClipper 1.2</h2>
+                <ul>
+                    <li>Nouveaux identifiants internes (suppression donnees personnelles)</li>
+                    <li>Repo passe en open source</li>
+                    <li>Corrections mineures</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://github.com/Lenouw/ZapClipper/releases/download/v1.2/ZapClipper-1.2.zip"
+                length="1449085"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.1</title>
             <pubDate>Sun, 23 Mar 2026 21:00:00 +0100</pubDate>
             <sparkle:version>2</sparkle:version>

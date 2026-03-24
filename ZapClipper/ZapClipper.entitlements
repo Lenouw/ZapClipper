@@ -8,7 +8,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>TQVHUV8MZY.com.florianbonin.ZapClipper</string>
+		<string>TQVHUV8MZY.com.zapclipper.app</string>
 	</array>
 </dict>
 </plist>

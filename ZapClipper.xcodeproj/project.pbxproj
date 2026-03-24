@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZapClipper/ZapClipper.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZapClipper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ZapClipper;
@@ -289,8 +289,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zapclipper.app;
 				PRODUCT_NAME = ZapClipper;
 				SDKROOT = macosx;
 			};
@@ -301,7 +301,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ZapClipperExtension/ZapClipperExtension.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZapClipperExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,8 +309,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper.ZapClipperExtension;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zapclipper.app.ZapClipperExtension;
 				PRODUCT_NAME = ZapClipperExtension;
 				SDKROOT = macosx;
 			};
@@ -388,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZapClipper/ZapClipper.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZapClipper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ZapClipper;
@@ -397,8 +397,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zapclipper.app;
 				PRODUCT_NAME = ZapClipper;
 				SDKROOT = macosx;
 			};
@@ -468,7 +468,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ZapClipperExtension/ZapClipperExtension.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZapClipperExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,8 +476,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.florianbonin.ZapClipper.ZapClipperExtension;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zapclipper.app.ZapClipperExtension;
 				PRODUCT_NAME = ZapClipperExtension;
 				SDKROOT = macosx;
 			};

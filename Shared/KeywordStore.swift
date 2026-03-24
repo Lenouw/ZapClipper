@@ -9,7 +9,7 @@ class KeywordStore {
 
     static let shared = KeywordStore()
 
-    private let suiteName = "TQVHUV8MZY.com.florianbonin.ZapClipper"
+    private let suiteName = "TQVHUV8MZY.com.zapclipper.app"
     private let key = "customKeywords"
 
     static let defaultFrench: [String] = [
