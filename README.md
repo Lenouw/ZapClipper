@@ -6,7 +6,7 @@ ZapClipper est une extension Apple Mail pour macOS qui detecte quand vous mentio
 
 ## Demo
 
-https://github.com/user-attachments/assets/ZapClipper.mp4
+https://github.com/Lenouw/ZapClipper/raw/main/ZapClipper.mp4
 
 ## Fonctionnalites
 
