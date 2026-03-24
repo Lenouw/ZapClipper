@@ -9,6 +9,7 @@ struct ContentView: View {
     @State private var newFrenchWord = ""
     @State private var newEnglishWord = ""
     @State private var showingResetAlert = false
+    @State private var autoCheckUpdates = false
 
     var body: some View {
         TabView {
@@ -248,10 +249,10 @@ struct ContentView: View {
                     Label("Mises a jour", systemImage: "arrow.triangle.2.circlepath")
                         .font(.headline)
 
-                    Toggle("Verifier automatiquement les mises a jour", isOn: Binding(
-                        get: { updater.automaticallyChecksForUpdates },
-                        set: { updater.automaticallyChecksForUpdates = $0 }
-                    ))
+                    Toggle("Verifier automatiquement les mises a jour", isOn: $autoCheckUpdates)
+                        .onChange(of: autoCheckUpdates) { newValue in
+                            updater.automaticallyChecksForUpdates = newValue
+                        }
 
                     HStack {
                         Button("Verifier maintenant") {
@@ -290,6 +291,9 @@ struct ContentView: View {
                 .foregroundStyle(.secondary)
         }
         .padding(32)
+        .onAppear {
+            autoCheckUpdates = updater.automaticallyChecksForUpdates
+        }
     }
 
     // MARK: - Actions
