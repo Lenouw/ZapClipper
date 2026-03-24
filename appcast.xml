@@ -17,6 +17,7 @@
             ]]></description>
             <enclosure
                 url="https://github.com/Lenouw/ZapClipper/releases/download/v1.2/ZapClipper-1.2.zip"
+                sparkle:edSignature="kag05sHiWqDKPEXIhoG95KSS/RE/qimb8tQT2KveONJsgnPA9MxaEZb7bsTLGUUJ5SzyZgJrImFNYukiDtl/CQ=="
                 length="1449085"
                 type="application/octet-stream"
             />
