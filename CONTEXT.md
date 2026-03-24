@@ -46,10 +46,12 @@ L'app est fonctionnelle et distribuee. Extension Mail macOS qui detecte les oubl
 - Video YouTube mise a jour vers v2
 - Export/Import des mots-cles (KeywordStore + boutons UI)
 - Decouverte que le sandbox bloquait l'installeur Sparkle → desactive
-- Nouveau logo ZapClipper (remplace "Anti Oups" dans les icones)
+- Nouveau logo ZapClipper (trombone + eclair bleu, remplace "Anti Oups")
 - Test complet du flux Sparkle : v1.2.1 → v1.2.2 installe avec succes
 - Releases v1.2.1 et v1.2.2 publiees sur GitHub
 - Appcast.xml mis a jour avec toutes les versions
+- Suppression ancien DerivedData qui causait une extension fantome dans Mail
+- SEO : 15 topics GitHub, description bilingue FR/EN, README enrichi avec mots-cles de recherche
 
 ## Processus de release (a suivre pour chaque mise a jour)
 
@@ -75,6 +77,12 @@ L'app est fonctionnelle et distribuee. Extension Mail macOS qui detecte les oubl
 7. **Filtrage citations** : coupe au premier `<blockquote>` (HTML) ou "Le ... a ecrit :" (texte brut)
 8. **Appcast URL** : `https://raw.githubusercontent.com/Lenouw/ZapClipper/main/appcast.xml`
 9. **Compiler != Installer** : apres un build, toujours copier dans /Applications avant de dire "c'est fait"
+
+## SEO et referencement
+
+- **GitHub Topics** (15) : macos, apple-mail, mail-extension, mailkit, attachment-reminder, swift, swiftui, sparkle, macos-app, productivity, email, forgotten-attachment, piece-jointe, oubli-piece-jointe, mail-plugin
+- **Description repo** : bilingue FR/EN
+- **README** : titre SEO, description EN, features bilingues, section mots-cles de recherche
 
 ## A faire ensuite
 
