@@ -4,9 +4,9 @@
 
 ZapClipper est une extension Apple Mail pour macOS qui detecte quand vous mentionnez une piece jointe dans un email sans en avoir attache une — et vous previent avant l'envoi.
 
-## Demo
+## Video explicative
 
-[![ZapClipper Demo](https://img.youtube.com/vi/1EWYjqluWoA/0.jpg)](https://www.youtube.com/shorts/1EWYjqluWoA)
+[![ZapClipper](https://img.youtube.com/vi/1EWYjqluWoA/0.jpg)](https://www.youtube.com/shorts/1EWYjqluWoA)
 
 ## Screenshots
 
