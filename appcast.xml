@@ -3,6 +3,26 @@
     <channel>
         <title>ZapClipper</title>
         <item>
+            <title>Version 1.3.0</title>
+            <pubDate>Thu, 27 Mar 2026 23:00:00 +0100</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>ZapClipper 1.3.0</h2>
+                <ul>
+                    <li>Correction faux positifs sur les mails transférés et réponses (sujet hérité ignoré)</li>
+                    <li>Meilleure détection du contenu cité (Apple Mail, Outlook, Gmail)</li>
+                    <li>Nettoyage et optimisation du code interne</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://github.com/Lenouw/ZapClipper/releases/download/v1.3.0/ZapClipper-1.3.0.zip"
+                sparkle:edSignature="nfnGp1IwPlEujlQNrScMVYXxV+wRBuRGIbxF9uMfw8XEw0BE/HOAxE7vtfuiNVAk8bo1e3GknDEvn4JGYjUXAw=="
+                length="1427867"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.2.2</title>
             <pubDate>Mon, 24 Mar 2026 11:00:00 +0100</pubDate>
             <sparkle:version>5</sparkle:version>

@@ -16,17 +16,11 @@ struct MIMEParser {
         }
 
         // Split headers from body
-        let headerBodySeparator = "\r\n\r\n"
-        let altSeparator = "\n\n"
-
-        let separator: String
         let separatorRange: Range<String.Index>
 
-        if let range = raw.range(of: headerBodySeparator) {
-            separator = headerBodySeparator
+        if let range = raw.range(of: "\r\n\r\n") {
             separatorRange = range
-        } else if let range = raw.range(of: altSeparator) {
-            separator = altSeparator
+        } else if let range = raw.range(of: "\n\n") {
             separatorRange = range
         } else {
             return Result(bodyText: raw, hasAttachments: false)
@@ -133,6 +127,13 @@ struct MIMEParser {
         if let range = html.range(of: "<div class=\"gmail_quote\"", options: .caseInsensitive) {
             return String(html[html.startIndex..<range.lowerBound])
         }
+        // Outlook-style quoted content
+        if let range = html.range(of: "<div id=\"appendonsend\"", options: .caseInsensitive) {
+            return String(html[html.startIndex..<range.lowerBound])
+        }
+        if let range = html.range(of: "<div id=\"divRplyFwdMsg\"", options: .caseInsensitive) {
+            return String(html[html.startIndex..<range.lowerBound])
+        }
         return html
     }
 
@@ -152,9 +153,19 @@ struct MIMEParser {
                (lowered.hasPrefix("on ") && lowered.contains("wrote:")) {
                 break
             }
-            // "---------- Forwarded message ----------"
-            if lowered.contains("forwarded message") || lowered.contains("message transféré") ||
-               lowered.contains("début du message transféré") || lowered.contains("begin forwarded message") {
+            // "---------- Forwarded message ----------" and variants
+            if lowered.contains("forwarded message") ||
+               lowered.contains("message transféré") ||
+               lowered.contains("début du message transféré") ||
+               lowered.contains("begin forwarded message") ||
+               lowered.contains("message réexpédié") ||
+               lowered.contains("début du message réexpédié") {
+                break
+            }
+            // Apple Mail forward header line: "De : xxx" / "Objet :" / "Date :" / "From:" / "Subject:"
+            // These appear as individual lines in the forward block
+            if (lowered.hasPrefix("de :") || lowered.hasPrefix("from:")) &&
+               trimmed.contains("@") {
                 break
             }
             // Separator lines like "---" or "___" before quoted content

@@ -32,9 +32,13 @@ class ComposeSessionHandler: NSObject, MEComposeSessionHandler {
         let parsed = MIMEParser.parse(data: rawData)
         let bodyText = parsed.bodyText
 
-        // Also check subject
+        // Also check subject — but skip inherited subjects from forwards/replies
+        // (e.g. "Tr : Facture..." or "Re: Invoice..." are not the user's words)
         let subject = session.mailMessage.subject
-        let fullText = subject + " " + bodyText
+        let trimmedSubject = subject.trimmingCharacters(in: .whitespaces).lowercased()
+        let inheritedPrefixes = ["tr :", "tr:", "fwd:", "fwd :", "re :", "re:", "fw:", "fw :"]
+        let isInherited = inheritedPrefixes.contains(where: { trimmedSubject.hasPrefix($0) })
+        let fullText = (isInherited ? "" : subject) + " " + bodyText
 
         // Look for attachment keywords
         guard let matchedKeyword = KeywordDetector.findKeyword(in: fullText) else {

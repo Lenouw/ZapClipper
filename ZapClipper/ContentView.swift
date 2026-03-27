@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var autoCheckUpdates = false
     @State private var exportMessage = ""
     @State private var showExportMessage = false
-    @State private var showImportAlert = false
 
     var body: some View {
         TabView {
