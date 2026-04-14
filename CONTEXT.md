@@ -1,11 +1,11 @@
 # ZapClipper - Contexte projet
 
-## Etat actuel (v1.3.0, build 6)
+## Etat actuel (v1.3.1, build 7)
 
 L'app est fonctionnelle et distribuee. Extension Mail macOS qui detecte les oublis de pieces jointes avant l'envoi.
 
 - **Repo** : https://github.com/Lenouw/ZapClipper (public, propre)
-- **Release actuelle** : v1.3.0 sur GitHub avec zip signe (EdDSA)
+- **Release actuelle** : v1.3.1 sur GitHub avec zip signe (EdDSA)
 - **Sparkle** : feed appcast.xml accessible, mises a jour automatiques fonctionnelles (teste de bout en bout)
 - **README** : video YouTube v2 explicative + 3 screenshots (accueil, mots-cles, alerte)
 - **Logo** : nouveau logo ZapClipper (trombone + eclair bleu), remplace l'ancien "Anti Oups"
@@ -18,7 +18,7 @@ L'app est fonctionnelle et distribuee. Extension Mail macOS qui detecte les oubl
 - Format : `MAJOR.MINOR.PATCH` (ex: 1.2.2)
 - Chaque nouvelle fonctionnalite = +0.0.1 (ex: 1.2.1 -> 1.2.2)
 - Grosse modification = +0.1.0 (ex: 1.2.x -> 1.3)
-- Le build number est incremente a chaque release (actuellement: 6)
+- Le build number est incremente a chaque release (actuellement: 7)
 
 ## Releases publiees
 
@@ -29,6 +29,7 @@ L'app est fonctionnelle et distribuee. Extension Mail macOS qui detecte les oubl
 | v1.2.1  | 4     | 24/03/2026 | Export/Import mots-cles, sandbox desactive |
 | v1.2.2  | 5     | 24/03/2026 | Nouveau logo ZapClipper |
 | v1.3.0  | 6     | 27/03/2026 | Fix faux positifs transferts/reponses, audit securite, nettoyage code |
+| v1.3.1  | 7     | 14/04/2026 | Fix detection pieces jointes Apple Mail (Content-Type sans Content-Disposition) |
 
 ## Ce qui a ete fait
 
@@ -74,6 +75,11 @@ L'app est fonctionnelle et distribuee. Extension Mail macOS qui detecte les oubl
 - **Ajout marqueurs de contenu cite** : Apple Mail ("message réexpédié"), Outlook (divRplyFwdMsg, appendonsend), headers forward inline
 - Release v1.3.0 complete : archive, export, signature Sparkle, release GitHub, appcast.xml mis a jour
 
+### Session 6 (14 avril 2026)
+- **Fix detection pieces jointes Apple Mail** : Apple Mail encode les fichiers joints avec `Content-Type: application/pdf; name="..."` sans header `Content-Disposition`. Le MIMEParser ne les reconnaissait pas comme des PJ → faux positif meme quand des fichiers etaient bien attaches.
+- **Correction dans `MIMEParser.swift`** : detecte maintenant les PJ via `Content-Type: application/*` (PDF, ZIP, DOCX...) et les images avec `name=`. Aussi pour les messages simples (non-multipart).
+- Release v1.3.1 complete : archive, export, signature Sparkle, release GitHub, appcast.xml, installee dans /Applications
+
 ## Structure du repo (apres nettoyage)
 
 ```
@@ -117,6 +123,7 @@ ZapClipper/
 7. **Filtrage citations** : coupe au premier `<blockquote>` (HTML) ou "Le ... a ecrit :" (texte brut). Aussi : marqueurs Outlook, Gmail, forward inline Apple Mail. Les sujets herites (Tr:/Fwd:/Re:) sont ignores pour la detection de mots-cles
 8. **Appcast URL** : `https://raw.githubusercontent.com/Lenouw/ZapClipper/main/appcast.xml`
 9. **Compiler != Installer** : apres un build, toujours copier dans /Applications avant de dire "c'est fait"
+10. **Detection PJ Apple Mail** : Apple Mail utilise `Content-Type: application/pdf; name="..."` sans `Content-Disposition` — il faut detecter les PJ via le Content-Type, pas seulement via Content-Disposition
 
 ## SEO et referencement
 
