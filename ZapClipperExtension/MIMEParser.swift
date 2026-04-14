@@ -34,8 +34,9 @@ struct MIMEParser {
             return parseMultipart(body: body, boundary: boundaryValue)
         }
 
-        // Simple message — no multipart, no attachments
-        let hasAttachment = headers.contains("content-disposition: attachment")
+        // Simple message — no multipart
+        let hasAttachment = headers.contains("content-disposition: attachment") ||
+                            headers.contains("content-type: application/")
         return Result(bodyText: stripHTMLTags(body), hasAttachments: hasAttachment)
     }
 
@@ -80,8 +81,15 @@ struct MIMEParser {
             let lowered = trimmed.lowercased()
 
             // Check for attachment indicators
+            // 1. Explicit attachment disposition
+            // 2. Any content-disposition with filename=
+            // 3. Non-text content types (application/pdf, image/png, etc.) — Apple Mail
+            //    often uses Content-Type: application/pdf; name="file.pdf" without
+            //    any Content-Disposition header
             if lowered.contains("content-disposition: attachment") ||
-               (lowered.contains("content-disposition:") && lowered.contains("filename=")) {
+               (lowered.contains("content-disposition:") && lowered.contains("filename=")) ||
+               lowered.contains("content-type: application/") ||
+               (lowered.contains("content-type: image/") && lowered.contains("name=")) {
                 hasAttachments = true
                 continue
             }

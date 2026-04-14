@@ -3,6 +3,25 @@
     <channel>
         <title>ZapClipper</title>
         <item>
+            <title>Version 1.3.1</title>
+            <pubDate>Mon, 14 Apr 2026 23:00:00 +0200</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>1.3.1</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>ZapClipper 1.3.1</h2>
+                <ul>
+                    <li>Correction : les pièces jointes PDF/ZIP/images étaient parfois non détectées (faux positifs)</li>
+                    <li>Meilleure compatibilité avec le format MIME d'Apple Mail</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://github.com/Lenouw/ZapClipper/releases/download/v1.3.1/ZapClipper-1.3.1.zip"
+                sparkle:edSignature="T6GnXNGLiTMfSxwfKRp6TJ27JUPaW3xz1P3I2sZyQ0Ude1dIHM7qBsx7y0OmOSkQsc8C4m4Av3ofr4akCWjcDg=="
+                length="1428068"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.3.0</title>
             <pubDate>Thu, 27 Mar 2026 23:00:00 +0100</pubDate>
             <sparkle:version>6</sparkle:version>
